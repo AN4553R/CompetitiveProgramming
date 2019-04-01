@@ -11,4 +11,5 @@
   - [Disjoint sets](DataStructure/Disjoint-sets.cpp )
   - [Fenwick Tree](DataStructure/FenwickTree.cpp )
 - [string](String)
+  - [KMP](String/KMP.cpp )
   - [Z-function](String/z.cpp )
