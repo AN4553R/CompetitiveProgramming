@@ -1,16 +1,15 @@
 # Code-Samples
-**Here is the content of my Code-Samples repo** :bowtie:
-- [Algorithms](Algorithms)
-  - [binary search](Algorithms/BS.cpp)
-  - [Detecting Cycle](Algorithms/Detecting_Cycle.cpp)
-  - [MST Kruskal](Algorithms/MST_Kruskal.cpp)
-  - [Merge sort](Algorithms/Merge_Sort.cpp)
-  - [Mo + sqrt decomposition](/CodeForces/86D.cpp)
+**Here the most used of my Code-Samples repo** :bowtie:
 - [Data structure](DataStructure)
   - [Classic segment tree](DataStructure/Classic_SegTree.cpp)
   - [Disjoint sets](DataStructure/Disjoint-sets.cpp)
   - [Fenwick Tree](DataStructure/FenwickTree.cpp)
+  - [Sparse Table](DataStructure/SparseTable.cpp)
+- [Dynamic Programming]
+- [Math]
+- [Searching]
+  - [binary search](Searching/binary_search.cpp)
 - [string](String)
   - [KMP](String/KMP.cpp)
   - [Z-function](String/z.cpp)
-  - [manachar](String/manachar_longest_palindromic_subs.cpp)
+- [Square Root Decomposition](SquareRootDecomposition/sqrtdecomp.cpp)
