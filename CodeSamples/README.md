@@ -5,8 +5,8 @@
   - [Disjoint sets](DataStructure/Disjoint-sets.cpp)
   - [Fenwick Tree](DataStructure/FenwickTree.cpp)
   - [Sparse Table](DataStructure/SparseTable.cpp)
-- [Dynamic Programming]
-- [Math]
+- [Dynamic Programming](DynamicProgramming)
+- [Math](Math)
 - [Searching]
   - [binary search](Searching/binary_search.cpp)
 - [string](String)
