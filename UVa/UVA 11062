@@ -1,0 +1,50 @@
+#pragma comment(linker, "/stack:200000000")
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+#define _CRT_SECURE_NO_WARNINGS
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define all(v) ((v).begin()),((v).end())
+#define rall(v) ((v).rbegin()),((v).rend())
+#define rep(i,n) for(int(i)=0;(i)<(int)n;(i)++)
+#define clr(v,idx) memset(v,idx,sizeof(v));
+#define vi vector<int>
+#define vll vector<ll>
+#define endl '\n'
+void SneakPeek() {
+#ifndef ONLINE_JUDGE
+	freopen("in.txt", "r", stdin);
+	freopen("out.txt", "w", stdout);
+#endif
+}
+void fast()
+{
+	std::ios_base::sync_with_stdio(0);
+	cin.tie(NULL); cout.tie(NULL);
+}
+
+
+
+int main()
+{
+	SneakPeek(); fast();
+	
+	map<string,bool>m;
+	string s,add="";
+	while (cin >> s) {
+	
+		rep(i,s.size())
+			if (isalpha(s[i])) add += tolower(s[i]);
+			else if (s[i] == '-') {
+				if (i != s.size()-1) add += s[i];
+			}
+			else if (!add.empty())
+				m[add]=1,add.clear();
+	
+			if (s[s.size()-1] != '-' && !add.empty())
+				m[add]=1,add.clear();
+	}
+
+	for (auto i : m)cout << i.first << endl;
+}
