@@ -7,7 +7,7 @@
   - [Sparse Table](DataStructure/SparseTable.cpp)
 - [Dynamic Programming](DynamicProgramming)
 - [Math](Math)
-- [Searching]
+- [Searching](Searching)
   - [binary search](Searching/binary_search.cpp)
 - [string](String)
   - [KMP](String/KMP.cpp)
