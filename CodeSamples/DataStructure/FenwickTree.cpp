@@ -37,7 +37,7 @@ public: FT(int n) { ft.assign(n + 1, 0); }
 int main()
 {
 	int f[] = { 2,4,5,5,6,6,6,7,7,8,9 };
-	fktree ft(10);
+	FT ft(10);
 
 	rep(i, 11)ft.adjust(f[i], 1);
 
