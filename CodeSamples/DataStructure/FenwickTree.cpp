@@ -17,21 +17,10 @@ typedef long long ll;
 #define endl '\n'
 //const int dx[] = {1,-1,0,0,1,-1,1,-1};
 //const int dy[] = {0,0,1,-1,1,-1,-1,1};
-void SneakPeek() {
-#ifndef ONLINE_JUDGE
-	freopen("in.txt", "r", stdin);
-	freopen("out.txt", "w", stdout);
-#endif
-}
-void fast()
-{
-	std::ios_base::sync_with_stdio(0);
-	cin.tie(NULL); cout.tie(NULL);
-}
 
-class fktree {
+class FT {
 private: vi ft;
-public: fktree(int n) { ft.assign(n + 1, 0); }
+public: FT(int n) { ft.assign(n + 1, 0); }
 		int rsq(int b) {
 			int sum = 0;
 			for (; b; b -= (b&-b))sum += ft[b];
@@ -47,8 +36,6 @@ public: fktree(int n) { ft.assign(n + 1, 0); }
 };
 int main()
 {
-	SneakPeek(); fast();
-
 	int f[] = { 2,4,5,5,6,6,6,7,7,8,9 };
 	fktree ft(10);
 
