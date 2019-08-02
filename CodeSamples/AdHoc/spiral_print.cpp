@@ -1,4 +1,4 @@
-* Part of Cosmos by OpenGenus Foundation */
+/* Part of Cosmos by OpenGenus Foundation */
 #include <vector>
 #include <sstream>
 
