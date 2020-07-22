@@ -1,4 +1,8 @@
 # CompetitiveProgramming
 Some of my competitive programming solutions (and other stuff)
 
-- [my problems solving code samples](CodeSamples)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)](#)
+[![forthebadge](https://forthebadge.com/images/badges/does-not-contain-treenuts.svg)](#)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-oxygen.svg)](#)
+
+- [My code samples](CodeSamples)
