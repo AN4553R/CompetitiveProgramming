@@ -122,6 +122,10 @@ class Dispatcher{
 	    	thread thr2(test_cnt_val<CountWithValue>);
 	    	thread thr3(test_auto<AutoIncrease>);
 	    	thread thr4(test_auto<AutoDecrease>);
+		thr1.join();
+	    	thr2.join();
+	    	thr3.join();
+	    	thr4.join();
 	    }
 };
 
