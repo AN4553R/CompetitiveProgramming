@@ -25,14 +25,13 @@ class Actor{
 		virtual void increase();
 		virtual void decrease();
 
-		string gatName(){
+		string getName(){
 			return this->name;
 		}
 		int getCount(){
 			return this->count;
 		}
-		virtual ~Actor(){};
-
+		~Actor(){}
 
 };
 
@@ -74,14 +73,60 @@ class AutoDecrease: public CountWithValue{
 		}
 };
 
+template <typename T>
+
+void test_internal_default() {
+   Actor* act;
+   T child;
+   act = &child;
+}
+
+template <typename T>
+
+void test_default() {
+   test_internal_default<T>();
+}
+
+template <typename T>
+
+void test_internal_cnt_val() {
+   Actor* act;
+   T child(1);
+   act = &child;
+}
+
+template <typename T>
+
+void test_cnt_val() {
+   test_internal_cnt_val<T>();
+}
+
+template <typename T>
+
+void test_internal_auto() {
+   Actor* act;
+   T child(1);
+   act = &child;
+}
+
+template <typename T>
+
+void test_auto() {
+   test_internal_auto<T>();
+}
 
 class Dispatcher{
-    Dispatcher(){
-    	thread mkActor(Actor());
-    }
+	public:
+	    Dispatcher(){
+	    	thread thr1(test_default<DefaultCount>);
+	    	thread thr2(test_cnt_val<CountWithValue>);
+	    	thread thr3(test_auto<AutoIncrease>);
+	    	thread thr4(test_auto<AutoDecrease>);
+	    }
 };
 
+
 int main() 
-{
-	 
+{	 
+	Dispatcher* inst;
 } 
