@@ -1,5 +1,5 @@
 class Solution {
-public: // O(N^3)? cuz we call the algorithm for each prefix and there are O(N) prefixes and the substr takes O(N)
+public:
     unordered_map<string, bool>used;
     
     bool dfs(string s, set<string>dict) {
@@ -22,6 +22,18 @@ public: // O(N^3)? cuz we call the algorithm for each prefix and there are O(N) 
     bool wordBreak(string s, vector<string>& wordDict) {
         set<string>dict;
         for(string i:wordDict)dict.insert(i);
-        return dfs(s, dict);
+        // return dfs(s, dict);
+        
+        vector<bool>dp(s.size() + 5);
+        
+        dp[0] = 1;
+        
+        for(int i = 1; i <= s.size(); i++) {
+            for(int j = 0; j  < i; j++) {
+             string word = s.substr(j , i - j);
+                dp[i]=dp[j] && dict.find(word)!=dict.end() || dp[i];
+            }
+        }
+        return dp[s.size()];
     }
 };
