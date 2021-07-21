@@ -61,7 +61,6 @@ class MyLinkedList:
         elif index == self.size:
             self.addAtTail(val)
         else:
-            
             ptr = self.head
 
             while index > 1:
@@ -87,7 +86,9 @@ class MyLinkedList:
             while index > 1:
                 index-=1
                 ptr = ptr.next
-            ptr.next =  ptr.next.next
+            tmp = ptr.next
+            ptr.next = tmp.next
+            tmp.next = None
             
         self.size-=1
 
