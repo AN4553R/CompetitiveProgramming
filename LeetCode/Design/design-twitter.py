@@ -17,7 +17,7 @@ class Tweet:
     def __init__(self, id, userId):
         self.id = id
         self.userId = userId
-        self.order = Tweet.order
+        self.order = Tweet.order # we can replace Tweet.order with datetime.datetime.now() and remove the __new__ dunder method
         
 class Twitter:
 
